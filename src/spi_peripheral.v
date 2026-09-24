@@ -60,7 +60,7 @@ module spi_peripheral (
     // Process SPI protocol in the clk domain
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
-            shift_reg = 16'd0;
+            shift_reg <= 16'd0;
             bit_count <= 5'd0;
             transaction_ready <= 1'b0;
         end else if (nCS_sync2 == 1'b0) begin
