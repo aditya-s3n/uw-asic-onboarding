@@ -39,7 +39,8 @@ module tt_um_uwasic_onboarding_aditya_sen (
   );
 
   spi_peripheral spi_peripheral_inst (
-    .clk(clk)
+    .clk(clk),
+    .rst_n(rst_n),
     .SCLK(ui_in[0]),
     .COPI(ui_in[1]),
     .nCS(ui_in[2]),
